@@ -1,5 +1,5 @@
 <% if @article.errors.any? %>
-<h2>The following errors prevent the article to be created</h2>
+<h2>The following errors prevent the list item to be created</h2>
 <ul>
   <% @article.errors.full_messages.each do |msg| %>
   <li><%= msg %></li>
@@ -17,9 +17,9 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit :create %>
   </p>
 
 <% end %>
 
-<%= link_to "Back to articles listing", articles_path %>
+<%= link_to "Back to Your To-do list", articles_path %>

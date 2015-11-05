@@ -3,3 +3,4 @@
 <p>Title: <%= @article.title %></p>
 <p>Description: <%= @article.description %></p>
 <%= link_to "Edit this item", edit_article_path(@article) %>
+<%= link_to "Back to your To-do list", user_path(current_user) %>

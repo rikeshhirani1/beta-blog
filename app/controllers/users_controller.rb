@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to To-do list #{@user.username}"
-      
+
       redirect_to login_path
     else
       render 'new'
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def show
     #added
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   private

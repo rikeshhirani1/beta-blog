@@ -38,7 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -46,3 +46,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+gem 'pg'
+gem 'rails_12factor'
+end
